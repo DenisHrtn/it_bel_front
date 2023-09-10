@@ -47,7 +47,7 @@ const NavLinks = () => {
   const links = LinksRender(
     !token ? anonymousLinks : authorId ? authorLinks : userLinks,
   );
-  console.log(token);
+
   return (
     <>
       {!token ? (

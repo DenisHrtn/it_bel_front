@@ -18,6 +18,7 @@ const NewsPage = () => {
     fetchAllNews: state.fetchAllNews,
     allNews: state.allNews,
   }));
+
   useEffect(() => {
     getAuthors(1);
     fetchAllNews();
