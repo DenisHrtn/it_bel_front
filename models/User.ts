@@ -6,9 +6,9 @@ export interface User {
   password: string;
 }
 
-interface Info {
+export interface Info {
   user_id: number;
-  username: string | null;
+  username: string;
   email: string;
   as_author: {
     author_id: number;
@@ -17,11 +17,12 @@ interface Info {
     age: number;
     date_joined: string;
   };
-  news: [];
+  news?: [];
 }
 
 export interface UserInfo {
   info: Info;
+  aboutSomeone: Info;
   getUserProfile: () => void;
   getUserInfo: (id: number) => void;
   getUserFollowing: (id: number) => void;

@@ -14,6 +14,7 @@ const NewsPage = () => {
     getAuthors: state.fetchAllAuthors,
     allAuthors: state.allAuthors,
   }));
+  
   const { fetchAllNews, allNews } = useNews((state) => ({
     fetchAllNews: state.fetchAllNews,
     allNews: state.allNews,
@@ -23,10 +24,12 @@ const NewsPage = () => {
     getAuthors(1);
     fetchAllNews();
   }, []);
+
   return (
     <div className={`${styles.newsContainer} ${merriweather_sans.className}`}>
       <div className='news'>
         <h3 className={styles.title}> Все новости</h3>
+        <Input text='Ищите новости' width='226px' margin='0 0 20px' />
         <News dataNews={allNews} width={260} height={177} />
       </div>
       <div className={styles.authors}>

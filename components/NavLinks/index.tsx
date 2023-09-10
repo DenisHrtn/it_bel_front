@@ -55,7 +55,7 @@ const NavLinks = () => {
       ) : (
         <>
           {links}
-          <Link href='/profile'>
+          <Link href={'/profile/myProfile/'}>
             <Image
               src='/userAvatar.jpg'
               width={40}

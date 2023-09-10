@@ -1,8 +1,9 @@
 import { createWithEqualityFn } from 'zustand/traditional';
 import { NewsStore } from '@/models/News';
-import ItBelServices from '@/services/ItBelServices';
 import { devtools } from 'zustand/middleware';
 import { shallow } from 'zustand/shallow';
+
+import ItBelServices from '@/services/ItBelServices';
 
 export const useNews = createWithEqualityFn<NewsStore>()(
   devtools((set) => ({
